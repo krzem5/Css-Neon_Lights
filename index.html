@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Neon Lights</title>
+		<link rel="stylesheet" href="./style.css">
+		<script type="text/javascript">
+			window.onload=function(){
+				var pr=document.getElementsByClassName("neon")[0]
+				for (var ch of pr.childNodes){
+					if (ch.classList){
+						ch.style.transform=`rotate(${Math.random()*3-1.5}deg) translate(${Math.random()*2-1}px,${Math.random()*2-1}px)`
+						ch.style.height=`${Math.random()*15+285}px`
+					}
+				}
+				setInterval(function(){
+					var s=false
+					for (var ch of pr.childNodes){
+						if (ch.classList&&Math.random()<=0.05){
+							ch.classList.add("off")
+							s=true
+						}
+					}
+					if (s==false){return}
+					setTimeout(function(){
+						for (var ch of pr.childNodes){
+							if (ch.classList&&ch.classList.contains("off")){
+								ch.classList.remove("off")
+							}
+						}
+					},50)
+				},750)
+			}
+		</script>
+	</head>
+	<body>
+		<div onclick="if (this.classList.contains('N')){document.body.requestFullscreen()}else{document.exitFullscreen()};this.classList.toggle('N');this.classList.toggle('Y')" class="N" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eee'" style="position: absolute;top: 20px;left: 20px;width: 40px;height: 40px;border-radius: 10%;background: #eee;mix-blend-mode: difference;transition: 0.3s"></div>
+		<div class="neon">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</body>
+</html>
