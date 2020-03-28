@@ -1,0 +1,79 @@
+body{
+	background: #000;
+	margin: 0;
+	padding: 0;
+}
+.neon{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	margin: 0;
+	padding: 0;
+}
+.neon *,.neon{
+	user-select: none;
+}
+.neon>span{
+	position: relative;
+	float: left;
+	margin: 0 50px;
+	height: 300px;
+	width: 10px;
+	background: #fff;
+	transition: box-shadow 0.05s,background 0.05s;
+}
+.neon>span:before{
+	content: "";
+	position: absolute;
+	top: -30px;
+	left: 0;
+	height: 30px;
+	width: 10px;
+	background: #262626;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+.neon>span:after{
+	content: "";
+	position: absolute;
+	bottom: -30px;
+	left: 0;
+	height: 30px;
+	width: 10px;
+	background: #262626;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+.neon>span:nth-child(1){
+	background: #ffd0d0;
+	box-shadow: 0 0 50px #f00,0 0 50px #f00,0 0 50px #f00;
+}
+.neon>span:nth-child(2){
+	background: #fff0d0;
+	box-shadow: 0 0 50px #f80,0 0 50px #f80,0 0 50px #f80;
+}
+.neon>span:nth-child(3){
+	background: #ffffd0;
+	box-shadow: 0 0 50px #ff0,0 0 50px #ff0,0 0 50px #ff0;
+}
+.neon>span:nth-child(4){
+	background: #d0ffd0;
+	box-shadow: 0 0 50px #0f0,0 0 50px #0f0,0 0 50px #0f0;
+}
+.neon>span:nth-child(5){
+	background: #d0d0ff;
+	box-shadow: 0 0 50px #26f,0 0 50px #26f,0 0 50px #26f;
+}
+.neon>span:nth-child(6){
+	background: #d0b0ff;
+	box-shadow: 0 0 50px #b0f,0 0 50px #b0f,0 0 50px #b0f;
+}
+.neon>span:nth-child(7){
+	background: #ffd0ff;
+	box-shadow: 0 0 50px #f0f,0 0 50px #f0f,0 0 50px #f0f;
+}
+.neon>span:hover,.neon>span.off{
+	background: #999;
+	box-shadow: none;
+}
