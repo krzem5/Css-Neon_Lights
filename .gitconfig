@@ -5,7 +5,6 @@ desc=Css-Neon_Lights
 public=true
 homepage=
 license=mit
-remote=
 
 file.readme=.\README.md
 file.gitignore=.\.gitignore
